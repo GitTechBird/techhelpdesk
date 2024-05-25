@@ -6,7 +6,7 @@ import { Navigate } from 'react-router-dom'
  */
 export const ChannelRedirect = () => {
 
-    const lastChannel = localStorage.getItem('ravenLastChannel') ?? 'general'
+    // const lastChannel = localStorage.getItem('ravenLastChannel') ?? 'general'
 
-    return <Navigate to={`/channel`} replace />
+    return <Navigate to={`/channel`} />
 }

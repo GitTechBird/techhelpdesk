@@ -3,7 +3,7 @@ export const buttonStyles = {
   components: {
     Button: {
       baseStyle: {
-        borderRadius: "16px",
+        borderRadius: "0.375rem",
         boxShadow: "45px 76px 113px 7px rgba(112, 144, 176, 0.08)",
         transition: ".25s all ease",
         boxSizing: "border-box",
@@ -16,7 +16,7 @@ export const buttonStyles = {
       },
       variants: {
         outline: () => ({
-          borderRadius: "16px",
+          // borderRadius: "16px",
         }),
         brand: (props) => ({
           bg: mode("brand.500", "brand.400")(props),

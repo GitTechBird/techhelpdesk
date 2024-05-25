@@ -3,13 +3,17 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "http://3.110.128.51/techhelpdesk",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build-single": "vite buildSingle",
     "build-frappe": "vite build --base=/assets/one_tap_v1/techhelpdesk/ && yarn copy-html-entry",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "copy-html-entry": "cp ../one_tap_v1/public/techhelpdesk/index.html ../one_tap_v1/www/techhelpdesk.html"
+    "copy-html-entry": "cp ../one_tap_v1/public/techhelpdesk/index.html ../one_tap_v1/www/techhelpdesk.html",
+    "copy-html-entry-new": "cp ../one_tap_v1/public/techhelpdesk/index.html ../one_tap_v1/www/techhelpdesk/index.html",
+    "copy-html-entry-1": "cp ../helpdesk/public/desk/index.html ../helpdesk/www/helpdesk/index.html"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
@@ -18,11 +22,27 @@
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
     "axios": "^1.6.7",
+    "dayjs": "^1.11.11",
+    "formik": "^2.4.6",
     "framer-motion": "^11.0.8",
     "frappe-react-sdk": "^1.4.2",
+    "history": "^5.3.0",
+    "html-react-parser": "^5.1.10",
+    "immer": "^10.0.4",
+    "lodash": "^4.17.21",
+    "moment": "^2.30.1",
+    "moment-timezone": "^0.5.45",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.2"
+    "react-icons": "^5.1.0",
+    "react-quill": "^2.0.0",
+    "react-router-dom": "^6.22.2",
+    "react-select": "^5.8.0",
+    "react-toastify": "^10.0.5",
+    "react-use-websocket": "^4.8.1",
+    "shave": "^5.0.4",
+    "use-immer": "^0.9.0",
+    "vite-plugin-css-injected-by-js": "^3.5.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.56",

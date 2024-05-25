@@ -4,15 +4,21 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <title>1TAP- Help desk</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="im-root"></div>
 		<script>window.csrf_token = '{{ csrf_token }}';
       if (!window.frappe) window.frappe = {};
   
       frappe.boot = JSON.parse({{ boot }});
     </script>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      setTimeout(() => {
+        ImWidget.init();  
+      }, 3000);
+      
+    </script>
   </body>
 </html>

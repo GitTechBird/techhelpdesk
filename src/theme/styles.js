@@ -51,6 +51,11 @@ export const globalStyles = {
       500: "#EE5D50",
       600: "#E31A1A",
     },
+    black: {
+      500: "#1B1B1B",
+      600: "#0C0404",
+      900: "#000000"
+    },
     blue: {
       50: "#EFF4FB",
       500: "#3965FF",
@@ -83,15 +88,20 @@ export const globalStyles = {
     global: (props) => ({
       body: {
         overflowX: "hidden",
-        fontFamily: "lato",
+        fontFamily: "Inter, sans-serif",
+        // fontFamily: "Poppins, sans-serif",
+        fontOpticalSizing: "auto",
+        fontStyle: "normal",
         letterSpacing: "-0.5px",
       },
       input: {
         color: "gray.700",
       },
       html: {
-        fontFamily: "lato",
+        fontFamily: "Inter, sans-serif",
+        // fontFamily: "Poppins, sans-serif",
       },
+      
     }),
   },
 };

@@ -1,0 +1,21 @@
+/* IM messanger Header css  */
+.im-messanger-header {
+    min-height: 50px;
+    width: 100%;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    z-index: 1;
+    padding-top: var(--chakra-space-2);
+    padding-bottom: var(--chakra-space-2);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    padding-right: var(--chakra-space-2);
+    background-color: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}

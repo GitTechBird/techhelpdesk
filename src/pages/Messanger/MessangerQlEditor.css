@@ -1,0 +1,38 @@
+.quill {
+    width: 95%;
+    margin-left: 2.5%;
+}
+.ql-container {
+    border-bottom-left-radius: 0.25em;
+    border-bottom-right-radius: 0.25em;
+    background: #fefcfc;
+}
+
+/* Snow Theme */
+.ql-snow.ql-toolbar {
+    display: block;
+    background: #fefcfc;
+    border: 0px solid #fefcfc;
+    border-top-left-radius: 0.25em;
+    border-top-right-radius: 0.25em;
+    padding: 4px;
+}
+.ql-container.ql-snow{
+    border: unset;
+}
+
+/* Bubble Theme */
+.ql-bubble .ql-editor {
+    border: 1px solid #ccc;
+    border-radius: 0.25em;
+}
+
+.ql-editor {
+    min-height: 6em;
+    max-height: 13em;
+}
+
+
+.ql-snow.ql-toolbar button, .ql-snow .ql-toolbar button {
+    height: 20px;
+}
