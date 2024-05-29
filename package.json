@@ -3,17 +3,19 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://3.110.128.51/techhelpdesk",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "build-single": "vite buildSingle",
-    "build-frappe": "vite build --base=/assets/one_tap_v1/techhelpdesk/ && yarn copy-html-entry",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
+    "dev": "echo '\n\n IM widget has started with base  techhelpdesk  \n\n' && BASE_APP=techhelpdesk vite",
+    "dev-hd": "echo '\n\n IM widget has started with base  helpdesk \n\n' && BASE_APP=helpdesk vite",
+
+    "build": "echo '\n\n App build for techhelpdesk  \n\n' && BASE_APP=techhelpdesk vite build --base=/assets/one_tap_v1/techhelpdesk/ && yarn copy-html-entry && yarn post-build-msg",
+
+    "build-widget": "echo '\n\n IM widget build for helpdesk  \n\n' && BASE_APP=helpdesk vite build --config vite.config-widget.ts && yarn post-build-msg",
+
     "copy-html-entry": "cp ../one_tap_v1/public/techhelpdesk/index.html ../one_tap_v1/www/techhelpdesk.html",
-    "copy-html-entry-new": "cp ../one_tap_v1/public/techhelpdesk/index.html ../one_tap_v1/www/techhelpdesk/index.html",
-    "copy-html-entry-1": "cp ../helpdesk/public/desk/index.html ../helpdesk/www/helpdesk/index.html"
+    "post-build-msg": "echo '\n\n IM widget build Successfull  \n\n'",
+
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",

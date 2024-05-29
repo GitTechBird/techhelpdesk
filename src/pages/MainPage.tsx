@@ -52,6 +52,7 @@ import useWebSocket, { ReadyState } from "react-use-websocket";
 import { isJSON } from "../utils/utils.ts";
 import { processPublishEvents } from "../utils/eventUtils.ts";
 import { useAppContext } from "../context/AppContext.tsx";
+import { useBaseUrl } from "../context/BaseUrlContext.tsx";
 import ConversationListItem from "./ConversationListItem.tsx";
 import { SEND_MESSAGE_ENUM } from "../utils/chatEventEnum.ts";
 import { CHAT_IM_DETAILS_ENUM, MESSANGER_TAB_ENUN } from "../utils/chatRequestEnum.ts";
@@ -61,6 +62,7 @@ import { getImDetails, postImDetails } from "../services/messangerIMService.ts";
 export const MainPage: React.FC<any> = () => {
   const { activeChannel, updateActiveChannel, updateIMDetails, hdActiveUser, activeTab } =
     useAppContext();
+  const { baseUrl } = useBaseUrl();
 
   const channelId = "659ff3b4d82398007c649739";
   const userId = "659ff3b4d82398007c649739";
@@ -536,7 +538,7 @@ export const MainPage: React.FC<any> = () => {
           align="stretch"
           style={{
             background: "#F8F8F8",
-            backgroundImage: "url(http://3.110.128.51/files/IM-BG-IMAGE.png)",
+            backgroundImage: `url(${baseUrl}/files/IM-BG-IMAGE.png)`,
             backgroundPosition: "center",
             backgroundAttachment: "fixed",
             backgroundColor: "#EEF1FA",

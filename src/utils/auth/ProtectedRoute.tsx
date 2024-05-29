@@ -12,8 +12,6 @@ export const ProtectedRoute = () => {
     if (loading) {
         return <FullPageLoader />
     } else if (!currentUser || currentUser === 'Guest') {
-        // return <Navigate to="login?redirect-to=/techhelpdesk" />
-        // return <Navigate to="app" />
         return <LoginRoutePage />
     } else {
         return (

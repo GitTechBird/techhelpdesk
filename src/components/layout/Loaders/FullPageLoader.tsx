@@ -7,7 +7,7 @@ interface Props extends FlexProps {
     text?: string
 }
 
-export const FullPageLoader = ({ text = "Ravens are finding their way to you...", ...props }: Props) => {
+export const FullPageLoader = ({ text = "Helpdesk IM is loading for you...", ...props }: Props) => {
     return (
         <div>
         {text}

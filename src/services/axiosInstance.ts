@@ -1,7 +1,8 @@
 import axios from 'axios';
+import { getBaseUrl } from "../utils/urlUtil.ts";
 
 const axiosInstance = axios.create({
-    baseURL: "http://3.110.128.51", // Replace with your actual base URL
+    baseURL: getBaseUrl(), // Replace with your actual base URL
     withCredentials: true
 });
 
