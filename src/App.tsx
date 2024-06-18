@@ -34,6 +34,7 @@ const router = createBrowserRouter(
   }
 );
 function App() {
+  const {baseUrl}  = useBaseUrl();
   // For code integration
   const history = createBrowserHistory({ basename:  baseName});
   // const history = createBrowserHistory({ basename: `${import.meta.env.VITE_BASE_NAME}` });
@@ -54,7 +55,7 @@ function App() {
 
   return (
     <FrappeProvider
-      url={import.meta.env.VITE_FRAPPE_PATH ?? ""}
+      url={baseUrl}
       enableSocket={true}
       socketPort={
         import.meta.env.VITE_SOCKET_PORT
